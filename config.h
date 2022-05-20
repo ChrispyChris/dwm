@@ -26,8 +26,8 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ NULL,       NULL,       NULL,       0,            False,       -1 },
+	/* class         instance    title       tags mask     isfloating   monitor */
+	{ "KeePassXC",   NULL,       NULL,       9,            0,           -1 },
 };
 
 /* layout(s) */
