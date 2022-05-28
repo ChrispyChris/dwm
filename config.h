@@ -1,3 +1,5 @@
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx = 1;        /* border pixel of windows */
 static const unsigned int gappx = 10;
@@ -97,6 +99,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+
+  // Volume settings.
+  {0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%")},
+  {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%")},
+  {0, XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle")},
 };
 
 /* button definitions */
